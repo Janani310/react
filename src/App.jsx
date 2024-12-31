@@ -14,7 +14,7 @@ import Banner2 from './components/Banner/Banner2';
 import Blogs from './components/Blogs/Blogs';
 import Partner from './components/Partner/Partner';
 import Footer from './components/Footer/Footer';
-import Shop from './components/Shop/Shop';
+
 import Cart from '../Cart/Cart';
 
 const BannerData ={
@@ -45,14 +45,8 @@ const App = () => {
   };
   return (
     <div>
-    <Router>
-    <Navbar cart={cart} />
-    <Routes>
-        <Route path="/" element={<Products addToCart={addToCart} />} />
-        <Route path="/shop" element={<Shop addToCart={addToCart} />} />
-        <Route path="/cart" element={<Cart cart={cart} />} />
-      </Routes>
-    </Router>
+    <Navbar/>
+   
       <Hero/>
       <Category/>
       <Category1/>
